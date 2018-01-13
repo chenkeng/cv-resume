@@ -1,0 +1,855 @@
+/**color
+蓝色：#0ca2ba
+墨黑色：#2c3c51
+墨黑色2:#2c3e50
+灰白色：#d7dbdb
+墨绿： #14a286
+Velocity.js&&css3
+**/
+
+
+/*reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+ul,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+	display: block;
+}
+
+ul li {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Primary style*/
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.68em;
+	font-family: "Microsoft YaHei", sans-serif;
+	line-height: 1;
+	color: #fff;
+	background-color: #22283f;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body::before {
+	content: 'mobile';
+	display: none;
+}
+
+@media only screen and (min-width: 1050px) {
+	body::before {
+		content: 'desktop';
+	}
+}
+
+a {
+	color: #267481;
+	text-decoration: none;
+}
+
+@media only screen and (min-width: 1050px) {
+	body[data-hijacking="on"] {
+		overflow: hidden;
+	}
+}
+
+.htmleaf-header {
+	background: #0ca2ba;
+	overflow: hidden;
+}
+
+.htmleaf-header div.nav {
+	width: 100vw;
+	height: 6em;
+	background: #2c3c51;
+}
+
+.message1 h1 {
+	line-height: 2.5em;
+	font-size: 2em;
+	font-family: "Segoe UI", Helvetica, sans-serif;
+	margin-left: 2em;
+}
+
+.htmleaf-header ul {
+	vertical-align: middle;
+	display: block;
+	padding: 2em 3em;
+	width: 100vw;
+	list-style: none;
+}
+
+.htmleaf-header ul li {
+	float: left;
+}
+
+.htmleaf-header ul li:first-of-type {
+	font-family: "Segoe UI", Helvetica, sans-serif;
+	font-size: 2em;
+	color: #0ca2ba;
+	padding-right: 23%;
+	padding-left: 3em;
+	padding-top: 0;
+}
+
+.aboutme {
+	height: 10em;
+	padding: 0 .6em .3em 5em;
+}
+
+span.job {
+	font-family: 'Microsoft YaHei';
+	font-size: 1.6em;
+}
+
+.aboutme p {
+	padding-left: 4em;
+	line-height: 1.8em;
+	letter-spacing: 0.1em;
+}
+
+.aboutme span.point {
+	font-size: 1.5em;
+	padding: 0 .1em;
+	color: burlywood;
+}
+
+section.message2 {
+	height: 26em;
+	width: 90vw;
+	margin-top: 1em;
+	position: relative;
+}
+
+section.message2 div.img {
+	height: 16em;
+	width: 16em;
+	border-radius: 50%;
+	margin: 2.8em 1em 1em 3em;
+	background: url(http://7xonct.com1.z0.glb.clouddn.com/CV%2Fhello.jpg) no-repeat 15px 16px;
+	background-size: 14em;
+	background-position: bottom;
+	border: 0.6em solid rgba(225, 225, 225, .3);
+}
+
+section.message2 dl {
+	margin-top: -1em;
+}
+
+@media screen and (min-width: 1600px) {
+	section.message2 div.img {
+		height: 17em;
+		widows: 17em;
+		background-size: 15em;
+	}
+	section.message2 dl {
+		margin-right: 5em;
+	}
+}
+
+section.message2 div.img:hover,
+.message2 dl:hover {
+	animation-fill-mode: both;
+	animation-duration: 0.7s;
+	animation-name: pulse;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+
+.message2 dl {
+	display: inline-block;
+	width: 30em;
+	height: auto;
+	position: absolute;
+	right: 18em;
+	top: 0.6em;
+	padding: .5em .5em 1em;
+	background: rgba(225, 225, 225, .1);
+	border-radius: 6px 0 6px 0;
+}
+
+@media screen and (min-width: 1600px) {
+	.message1 h1 {
+		line-height: 3em;
+	}
+	section.message2 div.img {
+		margin-top: 3em;
+	}
+}
+
+.message2 dl dt {
+	float: left;
+	width: 10em;
+	padding: 1.2em 1em .6em;
+	margin-right: 2em;
+	letter-spacing: .1em;
+}
+
+.message2 dl dd {
+	padding: 1.2em 0 .6em;
+	border-bottom: .11em dashed #fff;
+	letter-spacing: .15em;
+}
+
+.message2 dl dd:last-of-type {
+	border-bottom: none;
+}
+
+dl:before,
+dl:after {
+	position: absolute;
+	content: '';
+	width: 3em;
+	height: 3em;
+}
+
+dl:before {
+	right: 0;
+	top: 0;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+}
+
+dl:after {
+	left: 0;
+	bottom: 0;
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.message2 .icon {
+	padding-right: .3em;
+}
+
+.message2 dl a {
+	text-decoration: none;
+	color: antiquewhite;
+}
+
+div.footadd {
+	position: absolute;
+	height: 1em;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background: #2c3e50;
+}
+
+
+/*长城页尾~*/
+
+.ss-style-boxes::before {
+	background-image: linear-gradient(to right, #0ca2ba 50%, #2c3e50 50%);
+	background-size: 130px 100%;
+	bottom: 1em;
+	height: 2.5em;
+	left: 0;
+	width: 100%;
+}
+
+section::before,
+section::after {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+}
+
+.htmleaf-header {
+	width: 100vw;
+	height: 100vh;
+}
+
+.cd-section:nth-of-type(2)>div {
+	background-color: #d7dbdb;
+}
+
+
+/*skills*/
+
+div.skills {
+	margin: 0 5em 2em 16em;
+}
+
+.skills h3 {
+	font-size: 1.3em;
+	color: #000;
+}
+
+.container {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.Skill h1 {
+	font-family: '幼圆';
+	line-height: 4em;
+	margin-left: 8em;
+	color: #000;
+	width: 100%;
+	font-size: 2em;
+}
+
+.GaugeMeter {
+	Position: Relative;
+	overflow: hidden;
+	Text-Align: Center;
+	Cursor: Default;
+	display: inline-block;
+}
+
+@media screen and (min-width: 1500px) {
+	.GaugeMeter {
+		margin-bottom: 1.9em;
+	}
+}
+
+.GaugeMeter span {
+	Margin: 0 .6em;
+	Width: 5em;
+	Position: Absolute;
+	Text-align: Center;
+	Display: Inline-Block;
+	Color: #000;
+	Font-Weight: 100;
+	Overflow: Hidden;
+	Text-Overflow: Ellipsis;
+	font-family: "Segoe UI";
+	font-size: 1.3em !important;
+}
+
+.container p {
+	font-family: 'Microsoft Yahei', "幼圆";
+	color: #000;
+	line-height: 1.5em;
+	margin-top: .5em;
+	text-indent: 1em;
+}
+
+.cd-section:nth-of-type(3)>div {
+	background-color: #d57744;
+}
+
+.project h1 {
+	font-size: 2.3em;
+	font-weight: bold;
+	color: #fff;
+	margin-left: 2.4em;
+	line-height: 3em;
+	font-family: '幼圆';
+}
+
+@media screen and (min-width: 1600px) {
+	.project h1 {
+		line-height: 4em;
+	}
+}
+
+.contain {
+	width: 100vw;
+	margin: 1em 5em;
+}
+
+.contain:before,
+.contain:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.contain .column {
+	width: 15em;
+	margin-right: 3.8em;
+	padding: 0 1em;
+	box-sizing: border-box;
+	float: left;
+}
+
+@media screen and (min-width: 1600px) {
+	.contain .column {
+		width: 16.7em;
+	}
+}
+
+.project span.icon-command {
+	margin-top: .2em;
+}
+
+.post-module {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	background: #ffffff;
+	width: 270px;
+	height: 470px;
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15);
+	transition: all 0.3s linear 0s;
+}
+
+.post-module:hover,
+.hover {
+	box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
+}
+
+.post-module:hover .thumbnail img,
+.hover .thumbnail img {
+	opacity: .6;
+}
+
+.post-module .thumbnail {
+	background: #000000;
+	height: 400px;
+	overflow: hidden;
+}
+
+.post-module .thumbnail img {
+	display: block;
+	width: 120%;
+	transition: all 0.3s linear 0s;
+}
+
+.post-module .post-content {
+	position: absolute;
+	bottom: 0;
+	background: #ffffff;
+	width: 100%;
+	padding: 30px;
+	-webkti-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	transition: all 0.3s cubic-bezier(0.37, 0.75, 0.61, 1.05) 0s;
+}
+
+.post-module .post-content .category {
+	position: absolute;
+	top: -34px;
+	left: 0;
+	background: #e74c3c;
+	padding: 10px 15px;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.post-module .post-content .title {
+	margin: 0;
+	padding: 0 0 10px;
+	color: #333;
+	font-size: 1.4em;
+	font-weight: 700;
+}
+
+.post-module .post-content .sub_title {
+	margin: 0;
+	padding: 0 0 20px;
+	color: #e74c3c;
+	font-size: 1.2em;
+	font-weight: 400;
+}
+
+.post-module .post-content .description {
+	display: none;
+	color: #666666;
+	font-size: 14px;
+	line-height: 1.8em;
+}
+
+.hover .post-content .description {
+	display: block;
+	height: auto;
+	opacity: 1;
+}
+
+.cd-section:nth-of-type(4)>div {
+	background-color: #fcb052;
+}
+
+.whyme {
+	overflow: hidden;
+	position: relative;
+}
+
+.tiltPage {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+}
+
+.halfPage {
+	position: absolute;
+	top: 0;
+	width: 50%;
+	height: 100vh;
+}
+
+.halfPageL {
+	left: 0;
+}
+
+.halfPageR {
+	left: 50%;
+}
+
+.tiltPage.active .halfPage {
+	transform: translate3d(0, 0, 0);
+}
+
+.tiltPage_half {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	width: 140%;
+	height: 100%;
+	transform: skewX(-18deg);
+}
+
+.halfPageL .tiltPage_half {
+	left: -40%;
+}
+
+.halfPageR .tiltPage_half {
+	right: -40%;
+}
+
+.tiltPage_me {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-family: "Segoe UI", Helvetica, sans-serif;
+	transform: skewX(18deg);
+}
+
+.tiltPage_me ol {
+	font-family: '幼圆', 'Microsoft YaHei';
+	counter-reset: li;
+}
+
+.tiltPage_me ol>li {
+	list-style: none;
+	padding: .5em 0 0;
+	margin: 1.5em 0 0 .6em;
+
+	border-top: .1em dashed coral;
+	width: 23em;
+}
+
+.tiltPage .hireMe {
+	font-size: 1.9em;
+	margin-top: 1em;
+}
+
+@media screen and (min-width: 1500px) {
+	.tiltPage .hireMe {
+		margin-top: 2.5em;
+	}
+}
+
+.tiltPage_me ol li:before {
+	content: counter(li);
+	counter-increment: li;
+	margin-right: 2em;
+	margin-left: -.5em;
+	padding: .55em .9em;
+	width: 1.5em;
+	background-color: coral;
+	border-bottom-left-radius: .6em;
+	border-top-left-radius: .6em;
+}
+
+.halfPageL .tiltPage_me {
+	padding-left: 30%;
+	padding-right: 30%;
+	padding-top: 5em;
+	transform-origin: 100% 0;
+	background: #292929;
+}
+
+.halfPageR .tiltPage_me {
+	padding-left: 30%;
+	padding-right: 30%;
+	transform-origin: 0 100%;
+	background-image: url("../img/dasheng.jpg");
+	background-position: right;
+}
+
+@media only screen and (min-width: 1050px) {
+	.cd-section h2 {
+		font-size: 4rem;
+		font-weight: 300;
+	}
+	[data-hijacking="on"] .cd-section {
+		visibility: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	[data-hijacking="on"] .cd-section>div {
+		visibility: visible;
+	}
+}
+
+@media only screen and (min-width: 1050px) {
+	.cd-section:first-of-type>div::before {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 1050px) {
+	.cd-section>div {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		transform: translateZ(0);
+		backface-visibility: hidden;
+	}
+	[data-hijacking="on"] .cd-section>div {
+		position: absolute;
+	}
+	[data-animation="rotate"] .cd-section>div {
+		transform-origin: center bottom;
+	}
+}
+
+.information .container{
+	background:url(../img/hire.jpg)no-repeat center center;
+	
+}
+
+.contact {
+	background-color: rgba(0, 0, 0, 0.70) ;
+	width: 100%;
+	text-align: center;
+	height: 100vh;
+	background-size: cover;
+}
+
+.contact h1 {
+	font-size: 2.8em;
+	line-height: 2.3;
+	margin-bottom: .3em;
+}
+
+.contact .app {
+	margin: auto;
+	margin-top:50px;
+	width: 40%;
+	height: 200px;
+	position: relative;
+}
+
+.contact p{
+	    color:#FFFFFF;	    
+}
+
+.app li {
+	width: 360px;
+	height: 25%;
+	line-height: 50px;
+	text-align: start;
+	
+}
+
+.app li .result {
+	position: absolute;
+	left: 86px;
+	top: 0px;
+}
+
+.app li a {
+	display: inline-block;
+	font-size: 16px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	color: #999999;
+	word-spacing:36px;
+}
+
+.app_img {
+	width: 110px;
+	height: 121px;
+	display: none;
+	position: absolute;
+	left: 420px;
+	top: 42px;
+}
+
+.contact_img {
+	display: block;
+}
+
+.cd-vertical-nav {
+	position: fixed;
+	z-index: 1;
+	right: 2%;
+	top: 50%;
+	bottom: auto;
+	transform: translateY(-50%);
+	display: none;
+	list-style: none;
+}
+
+.cd-vertical-nav a {
+	display: block;
+	height: 40px;
+	width: 40px;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	background: url(../img/cd-icon-arrow.svg) no-repeat center center;
+}
+
+.cd-vertical-nav a.cd-prev {
+	transform: rotate(180deg);
+	margin-bottom: 10px;
+}
+
+.cd-vertical-nav a.inactive {
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+
+@media only screen and (min-width: 1050px) {
+	.cd-vertical-nav {
+		display: block;
+	}
+}
